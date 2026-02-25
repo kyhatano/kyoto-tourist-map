@@ -8,4 +8,5 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
+  base: './', // 相対パスでのビルドを指定（白画面対策）
 })
