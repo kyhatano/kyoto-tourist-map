@@ -39,7 +39,7 @@ function App() {
   };
 
   return (
-    <div className="flex flex-col md:flex-row w-full h-screen font-serif bg-[#fdfbf7] overflow-hidden">
+    <div className="flex flex-col-reverse md:flex-row w-full h-screen font-serif bg-[#fdfbf7] overflow-hidden">
       <Sidebar
         locations={locations}
         onSelectLocation={handleSelectLocation}
@@ -54,8 +54,9 @@ function App() {
           setShowSecondary(val);
           setTimeout(() => setMapBounds(calculateBounds()), 100);
         }}
+        isFocused={!!selectedLocation}
       />
-      <div className="flex-grow flex flex-col relative h-[55vh] md:h-full">
+      <div className="flex-grow flex flex-col w-full relative md:h-full transition-all duration-300">
         <Map
           locations={locations.filter(loc =>
             (loc.type === 'primary' && showPrimary) ||
