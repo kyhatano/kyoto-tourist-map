@@ -27,7 +27,7 @@ export default function Sidebar({
     });
 
     return (
-        <div className="w-[380px] h-screen bg-white flex flex-col shadow-xl z-10 shrink-0">
+        <div className="w-full md:w-[380px] h-[45vh] md:h-full bg-white flex flex-col shadow-xl z-10 shrink-0">
             {/* Header */}
             <div className="p-6 pb-5 bg-gradient-to-br from-[#8b3a3a] to-[#5c2626] text-white">
                 <h1 className="text-2xl font-bold font-['Noto_Serif_JP'] tracking-wider mb-1">

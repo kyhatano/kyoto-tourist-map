@@ -39,7 +39,7 @@ function App() {
   };
 
   return (
-    <div className="flex w-full h-screen font-serif bg-[#fdfbf7]">
+    <div className="flex flex-col md:flex-row w-full h-screen font-serif bg-[#fdfbf7] overflow-hidden">
       <Sidebar
         locations={locations}
         onSelectLocation={handleSelectLocation}
@@ -55,7 +55,7 @@ function App() {
           setTimeout(() => setMapBounds(calculateBounds()), 100);
         }}
       />
-      <div className="flex-grow h-screen relative">
+      <div className="flex-grow flex flex-col relative h-[55vh] md:h-full">
         <Map
           locations={locations.filter(loc =>
             (loc.type === 'primary' && showPrimary) ||
